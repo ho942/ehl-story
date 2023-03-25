@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> 1st anniversary </title>
+<meta charset = "utf-8">
+<script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.min.js">
+</script>
+<script>
+  function Timer() {
+setTimeout("locateKap()",10000);
+ }
+function locateKap(){
+ location.replace("video.html");
+}
+</script>
+</head>
+<body>
+  <div class ='btn'>
+    
+  </div>
+<script>
+
+const heart = [];
+let a = 0;
+let sen = ["서연아","안녕!","우리가 만난지 벌써 1년이야!","사랑해"]
+let dow =[0, 100, 200, 300];
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+}
+
+// function fill1(){
+//   fill(0,0,0,255);
+// }
+
+
+function talk1(){
+
+  text("서연아 안녕!",0,0);
+
+
+}
+function talk2(){
+  text("이제는!",0,90);
+}
+
+
+
+
+
+function draw() {
+  background("#033268");
+  translate(width/2, height/2);
+
+  stroke(255);
+  strokeWeight(2);
+  noFill();
+  beginShape();
+  for (let v of heart) {
+    vertex(v.x, v.y);
+  }
+  endShape();
+
+  const r = height/40;
+  const x = r * 16 * pow(sin(a), 3);
+  const y = -r*(13 * cos(a) - 5*cos(2*a) - 2*cos(3*a)- cos(4*a));
+  heart.push(createVector(x, y));
+  
+  // So that it stops
+  if (a > TWO_PI) {
+    noLoop();
+        textSize(50);
+    textAlign(CENTER);
+    setTimeout(talk1,1000);
+
+    setTimeout(talk2,4500);
+
+    Timer();
+
+
+    // textSize(50);
+    // textAlign(CENTER);
+    // text("서연아",0,0);
+    // setTimeout(9000);
+    // text("고마워",0,90);
+    
+  }
+
+  a += 0.04;
+
+}
+</script>
+
+</body>
+</html>

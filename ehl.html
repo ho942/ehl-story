@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <title> EHLstory - welcome</title> -->
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="ehlstyle.css">
+    <script src = 'color.js'> // object method </script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.min.js">
+    </script>
+</head>
+
+<body>
+    <h1> EHL story</h1>
+    <div id="grid">
+
+        <ul>
+            <script>
+                var linkt = {
+                    'Home': 'home',
+                    'Project': 'project',
+                    'Today data': 'today'
+
+                };
+                for (var key in linkt) {
+                    document.write('<li><a href="' + linkt[key] + '.html">' + key + '</a> </li>');
+                }
+            </script>
+        </ul>
+
+
+        <div id="article">
+            <h2>profile</h2>
+            <img src="ehl.jpg">
+            <p>
+                name : EHL (Everlasting Hope and Liberty)
+            </p>
+            <p>
+                birth : 99.2 ~
+            </p>
+            <p>
+                E-mail : hje268rla@gmail.com
+            </p>
+            <p>
+                Hello. welcome to EHL story page. It is for studying web.
+            </p>
+            <p>
+                I'm pleasure to meet you here.
+            </p>
+
+            <input type="button" value="night" onclick="
+ nightDayHandlder(this);
+            ">
+            
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

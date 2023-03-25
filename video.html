@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html Lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title> video</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="videostyle.css">
+    
+</head>
+
+<body>
+    <div class="btn">
+        <div class="play"></div>
+        <p> Play Video </p>
+        </div>
+        <div class="clip">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6-1iTJkVlxo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+            <!-- <video src="celebrity0328.mp4" controls></video> -->
+            <b class="close">Close</b>
+        </div>
+        <script>
+            let btn = document.querySelector('.btn');
+            let clip = document.querySelector('.clip');
+            let close = document.querySelector('.close');
+            let video = document.querySelector('video');
+            btn.onclick = function () {
+                btn.classList.add('active');
+                clip.classList.add('active');
+                video.play();
+                video.currentTime = 0;
+            }
+            close.onclick = function () {
+                btn.classList.remove('active');
+                clip.classList.remove('active');
+                video.pause();
+            }
+        </script>
+</body>
+
+</html>
